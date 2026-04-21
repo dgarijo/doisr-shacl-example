@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "People",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/Person"
+  },
+  "$defs": {
+    "Person": {
+      "type": "object",
+      "required": ["givenName", "birthDate", "address"],
+      "properties": {
+        "givenName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "birthDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "gender": {
+          "type": "string",
+          "enum": ["male", "female", "other"]
+        },
+        "address": {
+          "$ref": "#/$defs/Address"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Address": {
+      "type": "object",
+      "required": ["streetName", "postalCode"],
+      "properties": {
+        "streetName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "postalCode": {
+          "type": "string",
+          "minLength": 3
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

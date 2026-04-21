@@ -1,0 +1,18 @@
+[{
+  "givenName": "Lucía",
+  "birthDate": "1995-04-12",
+  "gender": "f",
+  "address": {
+    "streetName": "Gran Vía"
+  }
+},
+{
+  "givenName": "Paco",
+  "birthDate": "1995-04-12",
+  "gender": "male",
+  "address": {
+    "streetName": "Gran Vía",
+    "postalCode": "28013"
+  }
+}
+]

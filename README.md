@@ -12,19 +12,28 @@ Then install the requirements: `pip install -r requirements.txt`
 This will install the dependencies for bot projects.
 
 ### JSON schema
-TBD
+With 
+```
+python -m jsonschema -i data/json/data_ok.json jsonschema/schema.json 
+```
+
+```
+python -m jsonschema -i data/json/data_not_ok.json jsonschema/schema.json 
+```
+
+
 
 ### SHACL
 
 The following command: 
 ```
-pyshacl -s shapes/shapes_example.ttl data/data_ok.jsonld -df json-ld
+pyshacl -s shapes/shapes_example.ttl data/json_ld/data_ok.jsonld -df json-ld
 ```
 will run a successful example in SHACL
 
 The following command:
 ```
-pyshacl -s shapes/shapes_example.ttl data/data_not_ok.jsonld -df json-ld
+pyshacl -s shapes/shapes_example.ttl data/json_ld/data_not_ok.jsonld -df json-ld
 ```
 will run an example where the shapes do not comply. Try to fix it
 
