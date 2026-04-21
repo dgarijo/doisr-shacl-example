@@ -1,0 +1,16 @@
+@prefix ec: <http://smartcity.linkeddata.es/lcc/ontology/EnergyConsumption#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://smartcity.linkeddata.es/lcc/shacl#> .
+
+ex:ValueShape 
+  a sh:NodeShape ; 
+  sh:targetClass ssn:ObservationValue ;
+  sh:property ex:QuantityShape .
+
+ex:QuantityShape 
+  a sh:PropertyShape ;
+  sh:path lcc:hasQuantityValue ;
+  <TO BE FILLED> .
+
+

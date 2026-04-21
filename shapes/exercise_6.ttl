@@ -1,0 +1,18 @@
+@prefix ec: <http://smartcity.linkeddata.es/lcc/ontology/EnergyConsumption#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://smartcity.linkeddata.es/lcc/shacl#> .
+
+ex:InstantShape
+  a sh:NodeShape ;
+  sh:targetClass time:Instant ;
+  <TO BE FILLED> ;
+  sh:property [
+    sh:path time:inXSDDateTime ;
+  ] ;
+  sh:property [
+    sh:path rdfs:label ;
+  ] .
+
+
+
